@@ -3,18 +3,18 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AnotherComponent } from './another/another.component';
-import { UserComponent } from './User/user.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnotherComponent
+    WarningAlertComponent,
+    SuccessAlertComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    UserComponent
+    AppRoutingModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
