@@ -1,3 +1,14 @@
-<h1>This is module based project</h1>
+<h1>Assignment 1 of Learning Angular</h1>
 <app-warning-alert></app-warning-alert>
 <app-success-alert></app-success-alert>
+
+<h1>Assignment 2 of Learning Angular</h1>
+<app-form></app-form>
+
+<h1>Assignment 3 of Learning Angular</h1>
+<!-- <app-thirdtask [title]="title"></app-thirdtask> -->
+<!-- <app-thirdtask [fruits]="fruitsArr"></app-thirdtask> -->
+ <app-thirdtask (myEvent)="fruits=$event"></app-thirdtask>
+ <div *ngFor="let item of fruits"> 
+    item from child
+    {{item}}</div>
