@@ -1,4 +1,4 @@
-<h1>Assignment 1 of Learning Angular</h1>
+<!-- <h1>Assignment 1 of Learning Angular</h1>
 <app-warning-alert></app-warning-alert>
 <app-success-alert></app-success-alert>
 
@@ -6,9 +6,32 @@
 <app-form></app-form>
 
 <h1>Assignment 3 of Learning Angular</h1>
-<!-- <app-thirdtask [title]="title"></app-thirdtask> -->
-<!-- <app-thirdtask [fruits]="fruitsArr"></app-thirdtask> -->
+<app-thirdtask [title]="title"></app-thirdtask>
+<app-thirdtask [fruits]="fruitsArr"></app-thirdtask>
  <app-thirdtask (myEvent)="fruits=$event"></app-thirdtask>
  <div *ngFor="let item of fruits"> 
     item from child
     {{item}}</div>
+
+<h1>Assignment 4 of Learning Angular</h1>
+<app-forth-task></app-forth-task> -->
+
+<div class="container">
+    <app-game-control (gameStarted)="onGameStarted($event)"></app-game-control>
+    <hr>
+    <div class="row">
+        <h1 class="col-md-6">Odd Numbers</h1>
+        <h1 class="col-md-6">Even Numbers</h1>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6 center">
+            <app-odd *ngFor="let index of oddNumberArr" [oddNumber] = index></app-odd>
+        </div>
+        <div class="col-md-6">
+            <app-even *ngFor="let index of evenNumberArr" [evenNumber] = index></app-even>
+        </div>
+    </div>
+
+
+</div>

@@ -14,4 +14,16 @@ export class AppComponent {
   //   'name' : 'sahil',
   //   'role' : 'dev'
   // };
+
+  oddNumberArr : number[] = [];
+  evenNumberArr : number[] = [];
+
+  onGameStarted(lastNumber : number){
+    if(lastNumber % 2 === 0){
+      this.evenNumberArr.push(lastNumber);
+    }
+    else{
+      this.oddNumberArr.push(lastNumber);
+    }
+  }
 }
