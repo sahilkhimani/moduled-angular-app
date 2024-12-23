@@ -16,7 +16,7 @@
 <h1>Assignment 4 of Learning Angular</h1>
 <app-forth-task></app-forth-task> -->
 
-<div class="container">
+<!-- <div class="container">
     <app-game-control (gameStarted)="onGameStarted($event)"></app-game-control>
     <hr>
     <div class="row">
@@ -34,4 +34,18 @@
     </div>
 
 
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <h1 myFirstCustomDirective>My Custom Directive</h1>
+    </div>
+    <!-- <div class="row">
+        <h2 appSecondCustomDirective>Second Custom Directive</h2>
+    </div> -->
+    <div appSecondCustomDirective class="row">
+        <div id="myCustomContainer">
+
+        </div>
+    </div>
 </div>
