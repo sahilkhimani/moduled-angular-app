@@ -37,14 +37,22 @@
 </div> -->
 
 <div class="container">
-    <div class="row">
+    <!-- <div class="row">
         <h1 myFirstCustomDirective [hoverColor]="'pink'" [hoverFont]="'15rem'">My Custom Directive</h1>
-    </div>
+    </div> -->
     <!-- <div class="row">
         <h2 appSecondCustomDirective>Second Custom Directive</h2>
     </div> -->
-    <div appSecondCustomDirective class="row">
+    <!-- <div appSecondCustomDirective class="row">
         <div id="myCustomContainer">
         </div>
-    </div>
+    </div> -->
+
+    <h1>Active Users</h1>
+    <app-active-users *ngFor="let item of activeUsers" [users]="item"></app-active-users>
+
+    <hr>
+    
+    <h1>In Active Users</h1>
+    <app-inactive-users *ngFor="let item of inactiveUsers" [users]="item"></app-inactive-users>
 </div>

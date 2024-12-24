@@ -8,22 +8,40 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'moduleBasedApp';
-  fruits= [];
+  fruits = [];
   // fruitsArr = ['apple', 'banana', 'orange', 'grapes'];
   // myObj = {
   //   'name' : 'sahil',
   //   'role' : 'dev'
   // };
 
-  oddNumberArr : number[] = [];
-  evenNumberArr : number[] = [];
+  oddNumberArr: number[] = [];
+  evenNumberArr: number[] = [];
 
-  onGameStarted(lastNumber : number){
-    if(lastNumber % 2 === 0){
+  onGameStarted(lastNumber: number) {
+    if (lastNumber % 2 === 0) {
       this.evenNumberArr.push(lastNumber);
     }
-    else{
+    else {
       this.oddNumberArr.push(lastNumber);
     }
   }
+
+  activeUsers: { name: string }[] = [
+    {
+      name: 'sahil'
+    },
+    {
+      name: 'asif'
+    }
+  ]
+
+  inactiveUsers: { name: string }[] = [
+    {
+      name: 'ahmed'
+    },
+    {
+      name: 'khan'
+    }
+  ]
 }

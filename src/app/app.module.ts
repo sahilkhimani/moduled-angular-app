@@ -12,6 +12,9 @@ import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { MyFirstCustomDirective } from './custom-directive/my-first-custom.directive';
 import { SecondCustomDirective } from './custom-directive/second-custom.directive';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,15 @@ import { SecondCustomDirective } from './custom-directive/second-custom.directiv
     OddComponent,
     EvenComponent,
     MyFirstCustomDirective,
-    SecondCustomDirective
+    SecondCustomDirective,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    CommonModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
