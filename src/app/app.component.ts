@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers : [UserService]  
 })
 export class AppComponent {
   title = 'moduleBasedApp';
@@ -27,21 +29,5 @@ export class AppComponent {
     }
   }
 
-  activeUsers: { name: string }[] = [
-    {
-      name: 'sahil'
-    },
-    {
-      name: 'asif'
-    }
-  ]
-
-  inactiveUsers: { name: string }[] = [
-    {
-      name: 'ahmed'
-    },
-    {
-      name: 'khan'
-    }
-  ]
+ 
 }

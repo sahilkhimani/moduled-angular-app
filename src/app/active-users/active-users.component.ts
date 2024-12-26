@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-active-users',
@@ -8,5 +9,15 @@ import { Component, Input } from '@angular/core';
   styleUrl: './active-users.component.css'
 })
 export class ActiveUsersComponent {
-  @Input() users : {name : string} = {name : 'sahil'};
+  @Input() users: string[] = [];
+   
+   constructor(private userService : UserService){}
+ 
+   ngOnInit(): void {
+     this.users = this.userService.activeUsers;
+   }
+ 
+   setInactive(id: number) {
+     this.userService.setInactive(id);
+   }
 }
