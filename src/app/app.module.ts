@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormComponent } from './form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThirdtaskComponent } from './thirdtask/thirdtask.component';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MyUserComponent } from './my-user/my-user.component';
+import { ProjectFormComponent } from './project-form/project-form.component';
 
   const appRoutes : Routes = [
     {path : "form", component : FormComponent},
@@ -39,11 +40,12 @@ import { MyUserComponent } from './my-user/my-user.component';
     InactiveUsersComponent,
     HomeComponent,
     MyUserComponent,
+    ProjectFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
