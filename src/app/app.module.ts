@@ -15,7 +15,14 @@ import { SecondCustomDirective } from './custom-directive/second-custom.directiv
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { MyUserComponent } from './my-user/my-user.component';
 
+  const appRoutes : Routes = [
+    {path : "form", component : FormComponent},
+    {path : "game", component : GameControlComponent}
+  ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,13 +36,16 @@ import { CommonModule } from '@angular/common';
     MyFirstCustomDirective,
     SecondCustomDirective,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    HomeComponent,
+    MyUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     provideClientHydration(withEventReplay())

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { UserService } from './services/user.service';
   providers : [UserService]  
 })
 export class AppComponent {
+  constructor(private router : Router){}
   title = 'moduleBasedApp';
   fruits = [];
   // fruitsArr = ['apple', 'banana', 'orange', 'grapes'];
@@ -29,5 +31,11 @@ export class AppComponent {
     }
   }
 
+  GamePage(){
+    this.router.navigate(["/game"]);
+  }
+  FormPage(){
+    this.router.navigate(["/form"]);
+  }
  
 }
