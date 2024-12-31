@@ -71,5 +71,12 @@
 
     <router-outlet></router-outlet> -->
 
-    <app-project-form></app-project-form>
+    <!-- <app-project-form></app-project-form> -->
+    <div class="row">
+        <h1>Posts From API</h1>
+    </div>
+    <ol>
+        <li *ngFor="let p of posts">{{ p.title }}</li>
+    </ol>
+
 </div>

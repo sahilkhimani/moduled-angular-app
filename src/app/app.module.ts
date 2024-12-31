@@ -19,6 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MyUserComponent } from './my-user/my-user.component';
 import { ProjectFormComponent } from './project-form/project-form.component';
+import { provideHttpClient } from '@angular/common/http';
 
   const appRoutes : Routes = [
     {path : "form", component : FormComponent},
@@ -47,10 +48,11 @@ import { ProjectFormComponent } from './project-form/project-form.component';
     AppRoutingModule,
     ReactiveFormsModule,
     CommonModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
